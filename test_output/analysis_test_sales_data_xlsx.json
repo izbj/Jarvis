@@ -1,0 +1,106 @@
+{
+  "file_info": {
+    "filename": "test_sales_data.xlsx",
+    "file_size": 8029,
+    "sheet_count": 1,
+    "sheets": [
+      "Sheet1"
+    ],
+    "analysis_date": "2026-03-10T16:42:07.446025"
+  },
+  "sheets_analysis": {
+    "Sheet1": {
+      "basic_info": {
+        "rows": 100,
+        "columns": 5,
+        "column_names": [
+          "日期",
+          "销售额",
+          "订单数",
+          "产品类别",
+          "地区"
+        ],
+        "data_types": {
+          "日期": "datetime64[us]",
+          "销售额": "int64",
+          "订单数": "int64",
+          "产品类别": "str",
+          "地区": "str"
+        },
+        "memory_usage": 14532
+      },
+      "data_quality": {
+        "missing_values": {
+          "日期": 0,
+          "销售额": 0,
+          "订单数": 0,
+          "产品类别": 0,
+          "地区": 0
+        },
+        "missing_percentage": {
+          "日期": 0.0,
+          "销售额": 0.0,
+          "订单数": 0.0,
+          "产品类别": 0.0,
+          "地区": 0.0
+        },
+        "duplicate_rows": 0
+      },
+      "statistical_analysis": {
+        "numeric_columns": [
+          "销售额",
+          "订单数"
+        ],
+        "categorical_columns": [
+          "产品类别",
+          "地区"
+        ],
+        "descriptive_stats": {
+          "销售额": {
+            "count": 100.0,
+            "mean": 3010.36,
+            "std": 1149.2698298564103,
+            "min": 1037.0,
+            "25%": 1968.5,
+            "50%": 3084.0,
+            "75%": 3950.75,
+            "max": 4979.0
+          },
+          "订单数": {
+            "count": 100.0,
+            "mean": 57.08,
+            "std": 26.939393257660967,
+            "min": 10.0,
+            "25%": 34.5,
+            "50%": 59.0,
+            "75%": 81.0,
+            "max": 98.0
+          }
+        },
+        "unique_counts": {
+          "日期": 100,
+          "销售额": 100,
+          "订单数": 60,
+          "产品类别": 4,
+          "地区": 4
+        }
+      },
+      "correlation_analysis": {
+        "销售额": {
+          "销售额": 1.0,
+          "订单数": -0.11380855071694139
+        },
+        "订单数": {
+          "销售额": -0.11380855071694139,
+          "订单数": 1.0
+        }
+      }
+    }
+  },
+  "summary": {
+    "total_rows": 100,
+    "total_columns": 5,
+    "total_sheets_analyzed": 1,
+    "analysis_completed": true
+  }
+}

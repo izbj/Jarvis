@@ -1,0 +1,42 @@
+{
+  "sheet_name": "Sheet1",
+  "original_shape": [
+    100,
+    5
+  ],
+  "cleaning_steps": [
+    {
+      "step": "analyze",
+      "config": {
+        "step": "analyze",
+        "enabled": true
+      },
+      "analysis": {
+        "sheet_name": "Sheet1",
+        "original_shape": [
+          100,
+          5
+        ],
+        "data_types": {
+          "日期": "datetime64[us]",
+          "销售额": "int64",
+          "订单数": "int64",
+          "产品类别": "str",
+          "地区": "str"
+        },
+        "missing_values": {
+          "counts": {
+            "日期": 0,
+            "销售额": 0,
+            "订单数": 0,
+            "产品类别": 0,
+            "地区": 0
+          },
+          "percentage": {
+            "日期": 0.0,
+            "销售额": 0.0,
+            "订单数": 0.0,
+            "产品类别": 0.0,
+            "地区": 0.0
+          },
+          "total_missing": 
