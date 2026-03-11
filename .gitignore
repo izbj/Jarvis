@@ -4,6 +4,9 @@
 *.pyc
 dist/
 build/
+packaging/windows/work/
+packaging/windows/build/
+packaging/windows/dist/
 docs/
 *.egg-info/
 *.egg
