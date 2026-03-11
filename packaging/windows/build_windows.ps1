@@ -20,9 +20,21 @@ $Python = if (Get-Command python -ErrorAction SilentlyContinue) {
     throw "Neither python nor py is available in PATH."
 }
 
-& $Python -m pip install --upgrade pip
-& $Python -m pip install cython pyinstaller
-& $Python -m pip install .
+function Invoke-Step {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string[]]$Command
+    )
+
+    & $Command[0] $Command[1..($Command.Length - 1)]
+    if ($LASTEXITCODE -ne 0) {
+        throw "Command failed with exit code ${LASTEXITCODE}: $($Command -join ' ')"
+    }
+}
+
+Invoke-Step -Command @($Python, "-m", "pip", "install", "--upgrade", "pip")
+Invoke-Step -Command @($Python, "-m", "pip", "install", "cython", "pyinstaller")
+Invoke-Step -Command @($Python, "-m", "pip", "install", ".")
 
 $Args = @(
     (Join-Path $PSScriptRoot "build_windows.py"),
@@ -37,4 +49,4 @@ if ($Annotate) {
     $Args += "--annotate"
 }
 
-& $Python @Args
+Invoke-Step -Command (@($Python) + $Args)

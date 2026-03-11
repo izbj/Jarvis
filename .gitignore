@@ -18,6 +18,7 @@ docs/
 *.pywz
 *.pyzz
 .venv/
+.win/
 venv/
 __pycache__/
 poetry.lock
